@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <head>
+        <title>Grupo-8</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/css/style.css"/>
+    </head>
+    <body>
+     <!-- Navbar -->
+        <div>
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                  <span class="navbar-brand mb-0 h1">Custom Banner</span>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <!-- Main section -->
+            <div class="row main-div">
+                <div class="col-6 main-title">
+                    <h1>Create your own </br>custom banner</h1>
+                    <button type="button" class="btn-create" onclick="startToggle()">Create now!</button>
+                </div>
+                <div class="col-6">
+                    <img src="./assets/img/main-image-01.png" class="main-img"/>
+                </div>
+            </div>
+            <!-- Toggle form section -->
+            <div class="row" id="form" style="display: none;">
+                <!--Form group -->
+                <form class="needs-validation" novalidate>
+                    <div class="group">
+                        <h5>Lets start!</h5>
+                    </div>
+                    <div class="row form-group group">
+                        <div class="col-6">    
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name" value="" required>      
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name" value="" required>
+                        </div>  
+                    </div>
+                    <div class="form-group group">
+                      <label for="colorInput" class="form-label">Choose a backgroung color:</label>
+                      <input type="color" class="form-control form-control-color color-picker" 
+                            id="colorInput" value="#563d7c" title="Choose your color">
+                    </div>
+                    <div class="form-check form-check-inline group">
+                        <input class="form-check-input custom-control-input" type="radio" name="flexRadioDefault" id="img1" required>
+                        <label for="img1"  class="custom-control-label" >
+                            <img src="./assets/img/bckg-image-02.png"  class="image-options" id="bckgImg1"/>                        
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline group">
+                        <label for="img2">
+                            <img src="./assets/img/bckg-image-03.png" class="image-options" id="bckgImg2" />
+                        </label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="img2" required>
+                    </div>                      
+                    <!-- Modal Section -->
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-pill" data-bs-toggle="modal" data-bs-target="#resultModal">
+                            See your cretion
+                        </button>    
+                        <!-- Modal -->
+                        <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="reresultModalLabel">Custom banner</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <b></b>
+                                        <div class="row custom-rectangle" id="customRectangle">
+                                            <label>
+                                                <img class="image-custom" id="customImage1"/>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>               
+                </form>
+            </div>
+        </div>
+        
+    </body>
+    <script src="./assets/js/main.js"></script>
+
+</html>
